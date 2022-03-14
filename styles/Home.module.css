@@ -1,53 +1,25 @@
-.container {
-  padding: 0 2rem;
-}
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
+  background-color: #dee4e8;
+  padding:1rem 4rem;
   border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+ 
 }
 
 .footer a {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
+  
 }
 
 .description {
@@ -108,9 +80,35 @@
   margin-left: 0.5rem;
 }
 
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 24px;
+}
+
+.section { 
+  width:100%;
+  align-self: center;
+  max-width: 1300px;
+  padding: 4rem;
+  
+}
+
+.icon { 
+  margin-right: 12px;
+  height: 32px;
+  width: 32px;
+  background-color: green;
+}
+
+
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
 }
+
+
