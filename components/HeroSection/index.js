@@ -13,7 +13,7 @@ const data = [
   { icon: party, text: 'Activity & play hours' }
 ]
 
-export default props => {
+export default function HeroSection (props) {
   const router = useRouter()
   const [dataIndex, setDataIndex] = useState(0)
 

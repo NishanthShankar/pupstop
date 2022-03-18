@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Select from 'react-select'
 import { serviceOptions, selectStyles, petOptions } from 'pages/data'
 
-export default props => {
+export default function LeadForm (props) {
   const [days, setDays] = useState(1)
   return (
     <article

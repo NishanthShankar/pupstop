@@ -9,7 +9,7 @@ const options = [
   { text: 'FAQs', href: '#faq' }
 ]
 
-export default props => {
+export default function Header (props) {
   const router = useRouter()
 
   const handleClick = href => e => {
