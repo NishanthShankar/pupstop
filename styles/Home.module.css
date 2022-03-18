@@ -83,6 +83,7 @@
 .title {
   font-size: 36px;
   font-weight: bold;
+  text-align: center;
   align-self: center;
   margin-bottom: 24px;
 }
@@ -90,7 +91,7 @@
 .section { 
   width:100%;
   align-self: center;
-  max-width: 1300px;
+  max-width: 980px;
   padding: 4rem;
   
 }

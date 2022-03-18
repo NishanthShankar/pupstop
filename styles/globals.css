@@ -34,6 +34,14 @@ article {
   flex-direction: row;
 }
 
+.a-center {
+  align-items: center;
+}
+
+.j-center {
+  justify-content: center;
+}
+
 #slider {
   /* -webkit-appearance: none; */
   outline: none;

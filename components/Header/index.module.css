@@ -1,0 +1,21 @@
+.cta {
+  cursor: pointer;
+  height: 36px;
+  margin-right: 36px;
+  padding: 4px 12px;
+  background-color: white;
+  border: 2px solid #5d53de;
+  border-radius: 8px;
+}
+
+.atag {
+  margin-right: 24px;
+  text-decoration: underline;
+  color:#5d53de;
+}
+
+@media (max-width: 760px) {
+  .atag {
+    display: none;
+  }
+}

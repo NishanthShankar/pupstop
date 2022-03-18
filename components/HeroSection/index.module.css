@@ -1,0 +1,17 @@
+.ctaImage { 
+  cursor: pointer;
+  height: 125px;
+  width: fit-content;
+  -moz-transition: transform 700ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 700ms cubic-bezier(.68,-.55,.265,1.55);
+  webkit-transition: transform 700ms cubic-bezier(.68,-.55,.265,1.55);
+  
+}
+
+.ctaImage:hover { 
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  
+}
