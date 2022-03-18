@@ -20,7 +20,7 @@ import partyIcon from 'assets/party.png'
 import facebook from 'assets/facebook.png'
 import instagram from 'assets/instagram.png'
 import location from 'assets/location.png'
-import { benefits } from './data'
+import { benefits } from 'data/data'
 // import featureBlob6 from 'assets/feature_blob_6.svg'
 // import featureBlob6 from 'assets/feature_blob_6.svg'
 
