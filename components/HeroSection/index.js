@@ -50,19 +50,30 @@ export default function HeroSection (props) {
       >
         <article>
           <h1 style={{ fontSize: 32, fontWeight: 'bold' }}>
-            TRUSTED PET CARE <br />
-            OF YOUR NEIGHBORHOOD
+            <span style={{ color: '#ec6336' }}>Trusted pet care</span> <br />
+            of your neighborhood
           </h1>
-          <article className='row' style={{ alignItems: 'center' }}>
+          <article
+            className='row'
+            style={{ marginBottom: 32, width: 360, alignItems: 'center' }}
+          >
             <img
               src={data[dataIndex]?.icon?.src}
-              style={{ width: 72, height: 72, margin: 32 }}
+              style={{ width: 72, height: 72 }}
             />
-            <span style={{ fontSize: 24, fontWeight: 800 }}>
+            <div
+              style={{
+                width: 2,
+                borderRadius: 999,
+                backgroundColor: 'black',
+                alignSelf: 'stretch',
+                margin: '0px 24px'
+              }}
+            ></div>
+            <span style={{ fontSize: 20, fontWeight: 800 }}>
               {data[dataIndex]?.text}
             </span>
           </article>
-          {/* <article style={{ height: 54, backgroundColor: '#5d53de' }}></article> */}
           <img
             onClick={handleClick}
             className={styles.ctaImage}

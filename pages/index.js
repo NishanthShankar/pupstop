@@ -259,16 +259,15 @@ export default function Home () {
               }}
             />
           </article>
-          <span>Working hours</span>
           <span>All days - 8:00 am to 10:00 pm</span>
+          <div style={{ height: 12 }} />
         </article>
 
         <article>
           <span>Address</span>
           <span>Wadala truck terminal Gala no 14</span>
           <span>Plot C1, shram shakti society</span>
-          <span>Mumbai, Maharashtra</span>
-          <span>400037</span>
+          <span>Mumbai 400037</span>
         </article>
       </footer>
     </article>

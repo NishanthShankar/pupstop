@@ -32,7 +32,7 @@ export default function LeadForm (props) {
           justifyContent: 'center',
           minHeight: 36,
           borderRadius: 12,
-          backgroundColor: '#5d53de'
+          backgroundColor: '#ec6336'
         }}
       >
         <span style={{ fontSize: 14, color: 'white' }}>GET QUOTE</span>

@@ -9,42 +9,42 @@ export const benefits = [
   {
     title: 'Boarding  ',
     icon: featureBlob1,
-    description: 'Safe day & overnight boarding for your fur babies'
+    description: 'Safe day & overnight boarding'
   },
   {
     title: 'Healthy meals',
     icon: featureBlob2,
-    description: 'Home cooked fresh & nutritious meal; no kibble!'
+    description: 'Cooked & nutritious. No kibble!'
   },
   {
     title: 'Vet services',
     icon: featureBlob3,
-    description: '24x7 on-call vet services at center for immediate attention'
+    description: '24x7 on-call vet at center'
   },
   {
     title: 'Activity hours',
     icon: featureBlob1,
-    description: 'Plenty space for play time & pet socials'
+    description: 'Plenty space for play time & socials'
   },
   {
     title: 'Parties',
     icon: featureBlob4,
-    description: 'Celebrations for your pets special days'
+    description: 'Special day celebrations'
   },
   {
     title: 'Pet consulting',
     icon: featureBlob5,
-    description: 'professional services for pet queries'
+    description: 'Consultations with experts'
   },
   {
     title: 'Private cabins',
     icon: featureBlob6,
-    description: 'even pets can need their own space!'
+    description: 'Pets need their own space too!'
   },
   {
     title: 'Pet walking',
     icon: featureBlob4,
-    description: 'For your pet’s health, behavior & stimulation.'
+    description: 'Keeping furry fit & happy'
   }
 ]
 
@@ -80,6 +80,7 @@ export const selectStyles = {
   control: provided => ({
     ...provided,
     // none of react-select's styles are passed to <Control />
-    border: '2px solid #5d53de'
+    border: '1px solid #ec6336',
+    borderRadius: 999
   })
 }
