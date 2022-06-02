@@ -9,43 +9,49 @@ export const benefits = [
   {
     title: 'Boarding  ',
     icon: featureBlob1,
+    type: 'egg',
     description: 'Safe day & overnight boarding'
   },
   {
     title: 'Healthy meals',
     icon: featureBlob2,
+    type: 'shell',
     description: 'Cooked & nutritious. No kibble!'
   },
   {
     title: 'Vet services',
-    icon: featureBlob3,
+    type: 'egg',
+    icon: featureBlob1,
     description: '24x7 on-call vet at center'
   },
   {
     title: 'Activity hours',
-    icon: featureBlob1,
+    icon: featureBlob2,
+    type: 'shell',
     description: 'Plenty space for play time & socials'
   },
   {
     title: 'Parties',
-    icon: featureBlob4,
+    icon: featureBlob1,
+    type: 'egg',
     description: 'Special day celebrations'
   },
   {
-    title: 'Pet consulting',
-    icon: featureBlob5,
-    description: 'Consultations with experts'
-  },
-  {
     title: 'Private cabins',
-    icon: featureBlob6,
+    icon: featureBlob2,
+    type: 'shell',
     description: 'Pets need their own space too!'
-  },
-  {
-    title: 'Pet walking',
-    icon: featureBlob4,
-    description: 'Keeping furry fit & happy'
   }
+  // {
+  //   title: 'Pet consulting',
+  //   icon: featureBlob1,
+  //   description: 'Consultations with experts'
+  // },
+  // {
+  //   title: 'Pet walking',
+  //   icon: featureBlob1,
+  //   description: 'Keeping furry fit & happy'
+  // }
 ]
 
 export const serviceOptions = [

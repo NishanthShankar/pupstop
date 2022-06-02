@@ -34,6 +34,7 @@ export default function HeroSection (props) {
     <section
       className='flexBox row'
       style={{
+        marginTop: 24,
         flexWrap: 'wrap',
         minHeight: '60vh',
         justifyContent: 'flex-end'
@@ -50,7 +51,8 @@ export default function HeroSection (props) {
       >
         <article>
           <h1 style={{ fontSize: 32, fontWeight: 'bold' }}>
-            <span style={{ color: '#ec6336' }}>Trusted pet care</span> <br />
+            {/* <span style={{ color: '#ec6336' }}>Trusted pet care</span> <br /> */}
+            <span style={{ color: '#01C4C6' }}>Trusted pet care</span> <br />
             of your neighborhood
           </h1>
           <article

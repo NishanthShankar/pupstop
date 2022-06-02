@@ -33,21 +33,23 @@ const faqStyles = {
 const blobStyles = {
   egg: {
     position: 'absolute',
-    left: 40,
+    left: 0,
     right: 0,
-    bottom: 0,
-    top: 44,
+    bottom: 20,
+    top: 80,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    color: '#fff'
   },
   shell: {
     position: 'absolute',
-    left: 40,
-    right: 0,
+    left: 0,
+    right: 26,
     bottom: 0,
-    top: 28,
+    top: 120,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    color: '#fff'
   }
 }
 
@@ -56,19 +58,17 @@ const BlobFeature = props => {
     <article
       style={{
         position: 'relative',
-        minWidth: 250,
-        width: '20%',
+        width: 340,
+        height: 220,
         marginLeft: 12,
-        marginRight: 12,
-        marginTop: 48,
-        marginBottom: 48
+        marginRight: 12
       }}
     >
-      <h3 style={{ fontSize: 20, textAlign: 'center', marginBottom: 24 }}>
-        {props.title}
-      </h3>
       <img src={props.image?.src} />
       <article style={blobStyles[props.type]}>
+        <span style={{ fontWeight: 600, fontSize: 20, textAlign: 'center' }}>
+          {props.title}
+        </span>
         <span>{props.description}</span>
       </article>
     </article>
@@ -136,7 +136,7 @@ export default function Home () {
           >
             {benefits.map(benefit => (
               <BlobFeature
-                type='egg'
+                type={benefit.type}
                 image={benefit.icon}
                 key={benefit.title}
                 title={benefit.title}

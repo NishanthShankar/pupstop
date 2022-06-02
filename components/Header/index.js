@@ -1,6 +1,7 @@
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styles from './index.module.css'
-
+import logo from '../../assets/logo.jpg'
 const options = [
   { text: 'Services', href: '#services' },
   { text: 'About Us', href: '#about-us' },
@@ -17,23 +18,23 @@ export default function Header (props) {
     router.push(href)
   }
 
+  const height = 72
   return (
     <header
       style={{
         padding: '0px 18px',
         display: 'flex',
-        backgroundColor: '#f7f9fa',
+        backgroundColor: 'white',
         zIndex: 2,
-        height: 56,
+
         position: 'fixed',
         left: 0,
         right: 0
       }}
     >
       <article className='row flex a-center'>
-        <article className='flex'>
-          <img style={{ height: 32, width: 96, backgroundColor: 'gray' }} />
-        </article>
+        <Image src={logo} width={height * 1.26} height={height} />
+        <article className='flex' />
         <article className='row a-center'>
           {options.map(option => (
             <a

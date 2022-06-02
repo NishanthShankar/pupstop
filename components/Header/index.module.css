@@ -4,14 +4,14 @@
   margin-right: 36px;
   padding: 4px 12px;
   color:white;
-  background-color: #ec6336;
-  border: 2px solid #ec6336;
+  background-color: #01C4C6;
+  border: 2px solid #01C4C6;
   border-radius: 8px;
 }
 
 .atag {
   margin-right: 24px; 
-  color:#ec6336;
+  color:#01C4C6;
 }
 
 @media (max-width: 760px) {
