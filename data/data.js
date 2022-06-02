@@ -13,19 +13,19 @@ export const benefits = [
     description: 'Safe day & overnight boarding'
   },
   {
-    title: 'Healthy meals',
+    title: 'Healthy Meals',
     icon: featureBlob2,
     type: 'shell',
     description: 'Cooked & nutritious. No kibble!'
   },
   {
-    title: 'Vet services',
+    title: 'Vet Services',
     type: 'egg',
     icon: featureBlob1,
     description: '24x7 on-call vet at center'
   },
   {
-    title: 'Activity hours',
+    title: 'Activity Hours',
     icon: featureBlob2,
     type: 'shell',
     description: 'Plenty space for play time & socials'
@@ -37,7 +37,7 @@ export const benefits = [
     description: 'Special day celebrations'
   },
   {
-    title: 'Private cabins',
+    title: 'Private Cabins',
     icon: featureBlob2,
     type: 'shell',
     description: 'Pets need their own space too!'
@@ -86,7 +86,7 @@ export const selectStyles = {
   control: provided => ({
     ...provided,
     // none of react-select's styles are passed to <Control />
-    border: '1px solid #ec6336',
+    border: '2px solid #01C4C6',
     borderRadius: 999
   })
 }

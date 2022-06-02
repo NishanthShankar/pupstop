@@ -58,7 +58,7 @@ const BlobFeature = props => {
     <article
       style={{
         position: 'relative',
-        width: 340,
+        width: 270,
         height: 220,
         marginLeft: 12,
         marginRight: 12
@@ -91,7 +91,7 @@ const SmallFeatureItem = props => (
         overflow: 'hidden',
         borderRadius: 999,
         backgroundColor: 'white',
-        border: '2px solid #c5cfd8'
+        border: '2px solid #01C4C6'
       }}
     >
       <img src={props.icon?.src} style={{ width: 24, height: 24 }} />
@@ -123,9 +123,9 @@ export default function Home () {
         <section
           id='services'
           className={`flexBox flex ${styles.section}`}
-          style={{ maxWidth: 1300 }}
+          style={{ maxWidth: '70vw' }}
         >
-          <h2 className={styles.title}>One Stop for your pet needs</h2>
+          <h2 className={styles.title}>One stop for all your Pet needs</h2>
           <article
             className='row'
             style={{
@@ -151,22 +151,19 @@ export default function Home () {
           </span>
         </section>
         <section id='book' className={`flexBox ${styles.section}`}>
-          <article
-            className='row'
-            style={{ flexWrap: 'wrap', justifyContent: 'center' }}
-          >
-            <article
-              style={{ flex: 1, justifyContent: 'space-around', minWidth: 276 }}
-            >
-              <h2 style={{ marginBottom: 54, fontSize: 44, marginRight: 44 }}>
-                How can we pamper your pet today?
+          <article className='row' style={{}}>
+            <article style={{ flex: 1 }}>
+              <h2 style={{ fontSize: 44 }}>
+                How can we <br />
+                pamper your <br />
+                pet today?
               </h2>
             </article>
             <LeadForm />
           </article>
         </section>
         <section id='facilities' className={`flexBox ${styles.section}`}>
-          <h2 className={styles.title}>We take pet care very seriously</h2>
+          <h2 className={styles.title}>We take Pet Care very seriously</h2>
           <article
             className='row'
             style={{ flexWrap: 'wrap', justifyContent: 'center' }}
@@ -184,13 +181,13 @@ export default function Home () {
                 <SmallFeatureItem label='Video Callings' icon={videoIcon} />
               </article>
             </article>
-            <article
+            {/* <article
               style={{ height: 240, width: 240, backgroundColor: 'gray' }}
-            />
+            /> */}
           </article>
         </section>
         <section id='locate-us' className={`flexBox ${styles.section}`}>
-          <h2 className={styles.title}>The best choice for your Pooch</h2>
+          <h2 className={styles.title}>The Best Choice for your Pooch</h2>
           <article
             className='row'
             style={{ alignItems: 'center', flexWrap: 'wrap' }}
@@ -205,18 +202,18 @@ export default function Home () {
             >
               <InfoItem
                 icon={ballIcon}
-                heading='FROM 8 AM TO 10 PM'
-                description='Timings are drop off after 8am and collection is before 10am on the morning of going home.'
+                heading='From 8 AM to 10 PM'
+                description='Facility is open for visit from 8am to 10pm'
               />
               <InfoItem
                 icon={partyIcon}
-                heading='FAVORITES'
+                heading='Favorites'
                 description='If your dog has separation anxiety we encourage you to bring something that smells like home.'
               />
               <InfoItem
                 icon={callIcon}
-                heading='CONTACT US ON'
-                description='axc@gfh.com | 9999999999'
+                heading='Contact us'
+                description='+91-9987511279'
               />
             </article>
             <img
@@ -232,7 +229,7 @@ export default function Home () {
 
       <footer className={styles.footer}>
         <article>
-          <span>Follow #Pupstop : a pet boarding centre</span>
+          <span>Follow #Pupstop : A Pet Boarding Centre</span>
           <article className='row'>
             <img
               onClick={() => {
@@ -264,7 +261,7 @@ export default function Home () {
         </article>
 
         <article>
-          <span>Address</span>
+          <span style={{ fontWeight: 'bold' }}>Address</span>
           <span>Wadala truck terminal Gala no 14</span>
           <span>Plot C1, shram shakti society</span>
           <span>Mumbai 400037</span>
