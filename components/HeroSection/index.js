@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import heroImage from 'assets/hero_image_01.png'
+// import heroImage from 'assets/hero_image_01.png'
+import heroImage from 'assets/logo.jpg'
 import consultation from 'assets/consultation.png'
 import party from 'assets/party.png'
 import car from 'assets/garage.png'
@@ -36,13 +37,12 @@ export default function HeroSection (props) {
       style={{
         marginTop: 24,
         flexWrap: 'wrap',
-        minHeight: '60vh',
-        justifyContent: 'flex-end'
+        minHeight: '60vh'
       }}
     >
       <article
-        className='flex'
         style={{
+          flex: 1,
           alignItems: 'center',
           justifyContent: 'center',
           padding: 24,
@@ -76,18 +76,21 @@ export default function HeroSection (props) {
               {data[dataIndex]?.text}
             </span>
           </article>
+
           <img
             onClick={handleClick}
             className={styles.ctaImage}
             src={boneIcon.src}
-            // style={{ height: 125, width: 'fit-content' }}
+            style={{
+              filter: 'saturate(116%) hue-rotate(166deg) brightness(112%)'
+            }}
           />
         </article>
       </article>
-      <article>
+      <article style={{ flex: 1, alignItems: 'center' }}>
         <img
           src={heroImage.src}
-          style={{ minWidth: 350, width: '45vw', height: 'fit-content' }}
+          style={{ minWidth: 320, marginTop: 60, width: '40vw' }}
         />
       </article>
     </section>

@@ -36,7 +36,7 @@ const blobStyles = {
     left: 0,
     right: 0,
     bottom: 20,
-    top: 80,
+    top: 50,
     justifyContent: 'center',
     alignItems: 'center',
     color: '#fff'
@@ -44,9 +44,9 @@ const blobStyles = {
   shell: {
     position: 'absolute',
     left: 0,
-    right: 26,
+    right: 0,
     bottom: 0,
-    top: 120,
+    top: 50,
     justifyContent: 'center',
     alignItems: 'center',
     color: '#fff'
@@ -69,7 +69,7 @@ const BlobFeature = props => {
         <span style={{ fontWeight: 600, fontSize: 20, textAlign: 'center' }}>
           {props.title}
         </span>
-        <span>{props.description}</span>
+        <span styl>{props.description}</span>
       </article>
     </article>
   )
@@ -123,15 +123,19 @@ export default function Home () {
         <section
           id='services'
           className={`flexBox flex ${styles.section}`}
-          style={{ maxWidth: '70vw' }}
+          style={{ maxWidth: '100vw' }}
         >
-          <h2 className={styles.title}>One stop for all your Pet needs</h2>
+          <h2 className={styles.title}>
+            One stop for all your
+            <br /> Pet needs
+          </h2>
           <article
             className='row'
             style={{
               alignSelf: 'center',
               flexWrap: 'wrap',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              maxWidth: '70vw'
             }}
           >
             {benefits.map(benefit => (
@@ -151,7 +155,17 @@ export default function Home () {
           </span>
         </section>
         <section id='book' className={`flexBox ${styles.section}`}>
-          <article className='row' style={{}}>
+          <article className={styles.xs_only} style={{ alignItems: 'center' }}>
+            <article style={{ flex: 1 }}>
+              <h2 style={{ fontSize: 44 }}>
+                How can we <br />
+                pamper your <br />
+                pet today?
+              </h2>
+            </article>
+            <LeadForm />
+          </article>
+          <article className={`row ${styles.no_xs}`}>
             <article style={{ flex: 1 }}>
               <h2 style={{ fontSize: 44 }}>
                 How can we <br />
@@ -162,6 +176,7 @@ export default function Home () {
             <LeadForm />
           </article>
         </section>
+
         <section id='facilities' className={`flexBox ${styles.section}`}>
           <h2 className={styles.title}>We take Pet Care very seriously</h2>
           <article
@@ -211,6 +226,7 @@ export default function Home () {
                 description='If your dog has separation anxiety we encourage you to bring something that smells like home.'
               />
               <InfoItem
+                type='call'
                 icon={callIcon}
                 heading='Contact us'
                 description='+91-9987511279'

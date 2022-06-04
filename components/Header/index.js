@@ -46,11 +46,8 @@ export default function Header (props) {
             </a>
           ))}
 
-          <article
-            onClick={handleClick('book')}
-            className={`a-center j-center ${styles.cta}`}
-          >
-            Book Now
+          <article className={`a-center j-center ${styles.cta}`}>
+            <a href='#book'>Book Now</a>
           </article>
         </article>
       </article>

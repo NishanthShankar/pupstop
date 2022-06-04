@@ -102,7 +102,13 @@
   background-color: green;
 }
 
+.xs_only {
+  display: none;
+}
 
+.no_xs {
+  display: flex;
+}
 
 @media (max-width: 600px) {
   .grid {
@@ -111,6 +117,12 @@
   }
   .footer {
     flex-direction: column;
+  }
+  .xs_only {
+    display: flex;
+  }
+  .no_xs {
+    display: none;
   }
 }
 

@@ -1,9 +1,25 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Select from 'react-select'
 import { serviceOptions, selectStyles, petOptions } from 'data/data'
 
 export default function LeadForm (props) {
+  const pet = useRef(null)
+  const service = useRef(null)
   const [days, setDays] = useState(1)
+
+  const onClick = () => {
+    let text = 'Hi, I would like to use your service'
+    if (service.current) text += ` ${service.current}`
+    if (pet.current) text += ` for my ${pet.current}`
+    else text += ' for my pet'
+    text += ` for ${days} day${days > 2 ? 's' : ''}`
+    console.log('TEXT:', text)
+    window.open(
+      `https://wa.me/919987511279?text=${encodeURIComponent(text)}`,
+      '_blank'
+    )
+  }
+
   return (
     <article
       style={{
@@ -13,9 +29,17 @@ export default function LeadForm (props) {
       }}
     >
       <span>Your pet</span>
-      <Select options={petOptions} styles={selectStyles} />
+      <Select
+        options={petOptions}
+        styles={selectStyles}
+        onChange={e => (pet.current = e.value)}
+      />
       <span style={{ marginTop: 12 }}>Service</span>
-      <Select options={serviceOptions} styles={selectStyles} />
+      <Select
+        options={serviceOptions}
+        styles={selectStyles}
+        onChange={e => (service.current = e.value)}
+      />
       <span style={{ marginTop: 12 }}>No of days: {days} </span>
       <input
         id='slider'
@@ -27,7 +51,9 @@ export default function LeadForm (props) {
       />
       <article className='flex' style={{ minHeight: 32 }} />
       <article
+        onClick={onClick}
         style={{
+          cursor: 'pointer',
           alignItems: 'center',
           justifyContent: 'center',
           minHeight: 36,
@@ -40,3 +66,5 @@ export default function LeadForm (props) {
     </article>
   )
 }
+
+// old color #ec6336

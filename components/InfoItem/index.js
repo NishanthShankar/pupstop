@@ -1,6 +1,15 @@
 export default function InfoItem (props) {
+  const canCall = props.type === 'call'
   return (
-    <article className='row' style={{ margin: '18px 0px' }}>
+    <article
+      className='row'
+      style={{ margin: '18px 0px', cursor: canCall ? 'pointer' : 'auto' }}
+      onClick={() => {
+        if (canCall) {
+          window.open('tel:+91900370303', '_blank')
+        }
+      }}
+    >
       <img
         src={props.icon?.src}
         style={{
