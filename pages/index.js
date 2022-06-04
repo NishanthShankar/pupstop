@@ -149,10 +149,33 @@ export default function Home () {
             ))}
           </article>
         </section>
-        <section id='about-us' className={`flexBox ${styles.section}`}>
+        <section
+          id='about-us'
+          className={`flexBox ${styles.section}`}
+          style={{ alignItems: 'center' }}
+        >
           <span className={styles.title}>
             What people have to tell about us
           </span>
+          <iframe
+            className={styles.no_xs}
+            width='720'
+            height='405'
+            src='https://www.youtube.com/embed/L_HQcawDEF8'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowfullscreen
+          />
+          <iframe
+            className={styles.xs_only}
+            width='100%'
+            src='https://www.youtube.com/embed/L_HQcawDEF8'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowfullscreen
+          />
         </section>
         <section id='book' className={`flexBox ${styles.section}`}>
           <article className={styles.xs_only} style={{ alignItems: 'center' }}>
