@@ -128,8 +128,8 @@ export default function Home () {
           style={{ maxWidth: '100vw' }}
         >
           <h2 className={styles.title}>
-            One stop for all your
-            <br /> Pet needs
+            One stop for all
+            <br /> your Pet needs
           </h2>
           <article
             className='row'
