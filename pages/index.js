@@ -339,8 +339,9 @@ export default function Home () {
 
         <article>
           <span style={{ fontWeight: 'bold' }}>Address</span>
-          <span>Wadala truck terminal Gala no 14</span>
-          <span>Plot C1, shram shakti society</span>
+          <span>Shop No.3 & 4 Ground Floor</span>
+          <span>Shramseva premises CHS Ltd</span>
+          <span>J 2 Wadala Truck Terminal, Wadala</span>
           <span>Mumbai 400037</span>
         </article>
       </footer>
