@@ -19,7 +19,7 @@ import ballIcon from 'assets/fitness-ball.png'
 import partyIcon from 'assets/party.png'
 import facebook from 'assets/facebook.png'
 import instagram from 'assets/instagram.png'
-import location from 'assets/location.png'
+import location from 'assets/location.jpg'
 import { benefits } from 'data/data'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
@@ -296,7 +296,7 @@ export default function Home () {
                 description='+91-9987511279'
               />
             </article>
-            <img src={location.src} style={{ height: 280 }} />
+            <img src={location.src} style={{ width: '82vw', maxWidth: 400 }} />
           </article>
         </section>
         <section id='faq' className={`flexBox ${styles.section}`}>
