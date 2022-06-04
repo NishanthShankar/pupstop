@@ -86,8 +86,8 @@ const SmallFeatureItem = props => (
         alignItems: 'center',
         justifyContent: 'center',
         marginRight: 12,
-        height: 44,
-        width: 44,
+        minHeight: 44,
+        minWidth: 44,
         overflow: 'hidden',
         borderRadius: 999,
         backgroundColor: 'white',
@@ -232,10 +232,7 @@ export default function Home () {
                 description='+91-9987511279'
               />
             </article>
-            <img
-              src={location.src}
-              style={{ height: 320, width: 320, backgroundColor: 'gray' }}
-            />
+            <img src={location.src} style={{ height: 280 }} />
           </article>
         </section>
         <section id='faq' className={`flexBox ${styles.section}`}>

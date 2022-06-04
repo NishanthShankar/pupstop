@@ -45,8 +45,8 @@ export default function HeroSection (props) {
           flex: 1,
           alignItems: 'center',
           justifyContent: 'center',
-          padding: 24,
-          paddingBottom: 0
+          margin: 24,
+          marginBottom: 0
         }}
       >
         <article>
