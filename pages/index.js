@@ -21,6 +21,8 @@ import facebook from 'assets/facebook.png'
 import instagram from 'assets/instagram.png'
 import location from 'assets/location.png'
 import { benefits } from 'data/data'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
 // import featureBlob6 from 'assets/feature_blob_6.svg'
 // import featureBlob6 from 'assets/feature_blob_6.svg'
 
@@ -157,11 +159,49 @@ export default function Home () {
           <span className={styles.title}>
             What people have to tell about us
           </span>
-          <iframe
+          <Carousel
+            showStatus={false}
+            showThumbs={false}
             className={styles.no_xs}
-            width='720'
-            height='405'
-            src='https://www.youtube.com/embed/L_HQcawDEF8'
+          >
+            <iframe
+              width='720'
+              height='405'
+              src='https://www.youtube.com/embed/_5XCigBt66Q'
+              title='YouTube video player'
+              frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowfullscreen
+            />
+
+            <iframe
+              width='720'
+              height='405'
+              src='https://www.youtube.com/embed/AeSkeHHAPIk?modestbranding=1'
+              title='YouTube video player'
+              frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowfullscreen
+            />
+          </Carousel>
+
+          <iframe
+            className={styles.xs_only}
+            style={{ marginBottom: 36 }}
+            width='100%'
+            height='220'
+            src='https://www.youtube.com/embed/_5XCigBt66Q?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0'
+            title='YouTube video player'
+            frameborder='0'
+            allowfullscreen
+          />
+
+          <iframe
+            className={styles.xs_only}
+            style={{ marginBottom: 36 }}
+            width='100%'
+            height='220'
+            src='https://www.youtube.com/embed/AeSkeHHAPIk'
             title='YouTube video player'
             frameborder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
@@ -170,6 +210,7 @@ export default function Home () {
           <iframe
             className={styles.xs_only}
             width='100%'
+            height='220'
             src='https://www.youtube.com/embed/L_HQcawDEF8'
             title='YouTube video player'
             frameborder='0'

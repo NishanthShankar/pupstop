@@ -72,3 +72,7 @@ article {
   cursor: pointer;
   background: #5a5;
 }
+
+li.dot {
+  background-color:#01C4C6 !important;
+}
