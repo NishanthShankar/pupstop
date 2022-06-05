@@ -171,7 +171,7 @@ export default function Home () {
               title='YouTube video player'
               frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowFullscreen
+              allowFullScreen
             />
 
             <iframe
@@ -181,7 +181,7 @@ export default function Home () {
               title='YouTube video player'
               frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowFullscreen
+              allowFullScreen
             />
           </Carousel>
 
@@ -193,7 +193,7 @@ export default function Home () {
             src='https://www.youtube.com/embed/_5XCigBt66Q?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0'
             title='YouTube video player'
             frameBorder='0'
-            allowFullscreen
+            allowFullScreen
           />
 
           <iframe
@@ -205,7 +205,7 @@ export default function Home () {
             title='YouTube video player'
             frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowFullscreen
+            allowFullScreen
           />
           <iframe
             className={styles.xs_only}
@@ -215,7 +215,7 @@ export default function Home () {
             title='YouTube video player'
             frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowFullscreen
+            allowFullScreen
           />
         </section>
         <section id='book' className={`flexBox ${styles.section}`}>
