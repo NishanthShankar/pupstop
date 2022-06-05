@@ -169,9 +169,9 @@ export default function Home () {
               height='405'
               src='https://www.youtube.com/embed/_5XCigBt66Q'
               title='YouTube video player'
-              frameborder='0'
+              frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowfullscreen
+              allowFullscreen
             />
 
             <iframe
@@ -179,9 +179,9 @@ export default function Home () {
               height='405'
               src='https://www.youtube.com/embed/AeSkeHHAPIk?modestbranding=1'
               title='YouTube video player'
-              frameborder='0'
+              frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowfullscreen
+              allowFullscreen
             />
           </Carousel>
 
@@ -192,8 +192,8 @@ export default function Home () {
             height='220'
             src='https://www.youtube.com/embed/_5XCigBt66Q?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0'
             title='YouTube video player'
-            frameborder='0'
-            allowfullscreen
+            frameBorder='0'
+            allowFullscreen
           />
 
           <iframe
@@ -203,9 +203,9 @@ export default function Home () {
             height='220'
             src='https://www.youtube.com/embed/AeSkeHHAPIk'
             title='YouTube video player'
-            frameborder='0'
+            frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowfullscreen
+            allowFullscreen
           />
           <iframe
             className={styles.xs_only}
@@ -213,9 +213,9 @@ export default function Home () {
             height='220'
             src='https://www.youtube.com/embed/L_HQcawDEF8'
             title='YouTube video player'
-            frameborder='0'
+            frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowfullscreen
+            allowFullscreen
           />
         </section>
         <section id='book' className={`flexBox ${styles.section}`}>
