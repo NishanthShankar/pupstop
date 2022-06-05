@@ -183,6 +183,15 @@ export default function Home () {
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
               allowFullScreen
             />
+            <iframe
+              width='720'
+              height='405'
+              src='https://www.youtube.com/embed/L_HQcawDEF8'
+              title='YouTube video player'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+            />
           </Carousel>
 
           <iframe
