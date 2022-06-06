@@ -48,9 +48,9 @@ const blobStyles = {
     left: 0,
     right: 0,
     bottom: 0,
-    top: 50,
+    top: 40,
     justifyContent: 'center',
-    alignItems: 'center',
+    marginLeft: 20,
     color: '#fff'
   }
 }
@@ -68,9 +68,7 @@ const BlobFeature = props => {
     >
       <img src={props.image?.src} />
       <article style={blobStyles[props.type]}>
-        <span style={{ fontWeight: 600, fontSize: 20, textAlign: 'center' }}>
-          {props.title}
-        </span>
+        <span style={{ fontWeight: 600, fontSize: 20 }}>{props.title}</span>
         <span styl>{props.description}</span>
       </article>
     </article>
@@ -261,12 +259,11 @@ export default function Home () {
                 <SmallFeatureItem label='Air Conditioning' icon={acIcon} />
                 <SmallFeatureItem label='24x7 CCTV' icon={cctvIcon} />
                 <SmallFeatureItem label='Daily Updates' icon={downloadIcon} />
-                <SmallFeatureItem label='Private Cabins' icon={cabinIcon} />
               </article>
               <article>
                 <SmallFeatureItem label='Pick up & Drop' icon={carIcon} />
                 <SmallFeatureItem label='On Call Vet' icon={emergencyIcon} />
-                <SmallFeatureItem label='Video Callings' icon={videoIcon} />
+                <SmallFeatureItem label='Private Cabins' icon={cabinIcon} />
               </article>
             </article>
             {/* <article
@@ -305,7 +302,13 @@ export default function Home () {
                 description='+91-9987511279'
               />
             </article>
-            <img src={location.src} style={{ width: '82vw', maxWidth: 400 }} />
+            <img
+              onClick={() =>
+                window.open('https://g.page/Pupstop?share', '_blank')
+              }
+              src={location.src}
+              style={{ cursor: 'pointer', width: '82vw', maxWidth: 400 }}
+            />
           </article>
         </section>
         <section id='faq' className={`flexBox ${styles.section}`}>

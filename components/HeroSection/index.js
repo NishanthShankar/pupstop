@@ -72,7 +72,7 @@ export default function HeroSection (props) {
                 margin: '0px 24px'
               }}
             ></div>
-            <span style={{ fontSize: 20, fontWeight: 800 }}>
+            <span style={{ maxWidth: 180, fontSize: 20, fontWeight: 800 }}>
               {data[dataIndex]?.text}
             </span>
           </article>

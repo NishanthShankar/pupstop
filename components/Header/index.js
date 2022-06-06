@@ -35,7 +35,7 @@ export default function Header (props) {
       <article className='row flex a-center'>
         <Image src={logo} width={height * 1.26} height={height} />
         <article className='flex' />
-        <article className='row a-center'>
+        <article className='row a-center' style={{ cursor: 'pointer' }}>
           {options.map(option => (
             <a
               onClick={handleClick(option.href)}
