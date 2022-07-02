@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import Select from 'react-select'
 import { serviceOptions, selectStyles, petOptions } from 'data/data'
-
+import TrackEvent from 'utils/tracking'
 export default function LeadForm (props) {
   const pet = useRef(null)
   const service = useRef(null)
@@ -13,7 +13,7 @@ export default function LeadForm (props) {
     if (pet.current) text += ` for my ${pet.current}`
     else text += ' for my pet'
     text += ` for ${days} day${days > 2 ? 's' : ''}`
-    console.log('TEXT:', text)
+    TrackEvent({ category: 'Lead_quote' })
     window.open(
       `https://wa.me/919987511279?text=${encodeURIComponent(text)}`,
       '_blank'
@@ -32,13 +32,19 @@ export default function LeadForm (props) {
       <Select
         options={petOptions}
         styles={selectStyles}
-        onChange={e => (pet.current = e.value)}
+        onChange={e => {
+          TrackEvent({ category: 'Lead_yourpet', label: e.value })
+          pet.current = e.value
+        }}
       />
       <span style={{ marginTop: 12 }}>Service</span>
       <Select
         options={serviceOptions}
         styles={selectStyles}
-        onChange={e => (service.current = e.value)}
+        onChange={e => {
+          TrackEvent({ category: 'Lead_service', label: e.value })
+          service.current = e.value
+        }}
       />
       <span style={{ marginTop: 12 }}>No of days: {days} </span>
       <input
@@ -47,7 +53,10 @@ export default function LeadForm (props) {
         min='1'
         max='30'
         defaultValue={1}
-        onChange={e => setDays(e.target.value)}
+        onChange={e => {
+          setDays(e.target.value)
+          TrackEvent({ category: 'Lead_days', label: e.target.value })
+        }}
       />
       <article className='flex' style={{ minHeight: 32 }} />
       <article

@@ -7,6 +7,7 @@ import party from 'assets/party.png'
 import car from 'assets/garage.png'
 import styles from './index.module.css'
 import boneIcon from 'assets/boneCTA.png'
+import TrackEvent from 'utils/tracking'
 
 const data = [
   { icon: consultation, text: 'Day & overnight boarding' },
@@ -20,6 +21,7 @@ export default function HeroSection (props) {
 
   const handleClick = e => {
     e.preventDefault()
+    TrackEvent({ category: 'Banner_BookNow' })
     router.push('#book')
   }
 

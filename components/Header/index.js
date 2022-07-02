@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styles from './index.module.css'
+import TrackEvent from 'utils/tracking'
 import logo from '../../assets/logo.jpg'
 const options = [
   { text: 'Services', href: '#services' },
@@ -14,6 +15,7 @@ export default function Header (props) {
   const router = useRouter()
 
   const handleClick = href => e => {
+    TrackEvent({ category: `Header_${href.slice(1)}` })
     e.preventDefault()
     router.push(href)
   }
@@ -47,7 +49,7 @@ export default function Header (props) {
           ))}
 
           <article className={`a-center j-center ${styles.cta}`}>
-            <a href='#book'>Book Now</a>
+            <a onClick={handleClick('#book')}>Book Now</a>
           </article>
         </article>
       </article>

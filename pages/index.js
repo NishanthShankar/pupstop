@@ -6,23 +6,28 @@ import InfoItem from 'components/InfoItem'
 import LeadForm from 'components/LeadForm'
 import HeroSection from 'components/HeroSection'
 import Header from 'components/Header'
-import faqData from 'data/faq_data.js'
+import { TrackFAQ } from 'data/faq_data.js'
 import acIcon from 'assets/air-conditioning.png'
 import cctvIcon from 'assets/cctv-camera.png'
 import downloadIcon from 'assets/download.png'
 import carIcon from 'assets/garage.png'
 import cabinIcon from 'assets/incognito.png'
 import emergencyIcon from 'assets/emergency-call.png'
-import videoIcon from 'assets/video-camera.png'
+
 import callIcon from 'assets/phone-call.png'
 import ballIcon from 'assets/fitness-ball.png'
 import partyIcon from 'assets/party.png'
 import facebook from 'assets/facebook.png'
 import instagram from 'assets/instagram.png'
 import location from 'assets/location.jpg'
+import TrackEvent from 'utils/tracking'
 import { benefits } from 'data/data'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
+import FAQSchema from 'components/Schemas/FAQSchema'
+import ServicesSchema from 'components/Schemas/ServicesSchema'
+import FacilitiesSchema from 'components/Schemas/FacilitiesSchema'
+import BusinessSchema from 'components/Schemas/BusinessSchema'
 // import featureBlob6 from 'assets/feature_blob_6.svg'
 // import featureBlob6 from 'assets/feature_blob_6.svg'
 
@@ -68,7 +73,7 @@ const BlobFeature = props => {
     >
       <img src={props.image?.src} />
       <article style={blobStyles[props.type]}>
-        <span style={{ fontWeight: 600, fontSize: 20 }}>{props.title}</span>
+        <h3 style={{ fontWeight: 600, fontSize: 20 }}>{props.title}</h3>
         <span styl>{props.description}</span>
       </article>
     </article>
@@ -116,7 +121,10 @@ export default function Home () {
         <meta name='twitter:description' content={description} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
+      <BusinessSchema />
+      <ServicesSchema />
+      <FacilitiesSchema />
+      <FAQSchema />
       <main className={styles.main}>
         <Header />
         <HeroSection />
@@ -303,16 +311,17 @@ export default function Home () {
               />
             </article>
             <img
-              onClick={() =>
+              onClick={() => {
+                TrackEvent({ category: 'Map' })
                 window.open('https://g.page/Pupstop?share', '_blank')
-              }
+              }}
               src={location.src}
               style={{ cursor: 'pointer', width: '82vw', maxWidth: 400 }}
             />
           </article>
         </section>
         <section id='faq' className={`flexBox ${styles.section}`}>
-          <Faq data={faqData} styles={faqStyles} />
+          <Faq data={TrackFAQ} styles={faqStyles} />
         </section>
       </main>
 
@@ -322,6 +331,7 @@ export default function Home () {
           <article className='row'>
             <img
               onClick={() => {
+                TrackEvent({ category: 'Social_fb' })
                 window.location = 'https://www.facebook.com/pupstopmumbai/'
               }}
               src={facebook.src}
@@ -334,6 +344,7 @@ export default function Home () {
             />
             <img
               onClick={() => {
+                TrackEvent({ category: 'Social_insta' })
                 window.location = 'https://www.instagram.com/pupstopmumbai/'
               }}
               src={instagram.src}
